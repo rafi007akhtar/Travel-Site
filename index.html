@@ -1,28 +1,64 @@
 <!DOCTYPE html>
 
+<!--
+CONTEST STRUCTURE:
+
+Home page: Default introductory page of the website. (Pic 1 & Pic 2)
+About Us page: A brief description about the agency. (Pic 3)
+Contact Us page: Contact details about the agency. Some fields where a person can send queries. (Pic 4)
+Destination page: Details about the tour packages. (Pic 5)
+Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
+-->
+
 <html>
     <head>
         <!-- Latest compiled and minified Bootstrap -->
         <link rel="stylesheet" href="http://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+        
         <!-- Own CSS stylesheet -->
         <link rel="stylesheet" href="common-styles.css">
+        
+        <!-- Include FONT AWESOME icons -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     </head>
     
     <body>
-        
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 bg-danger test-text"> Testing bootsrap </div>
+        <div class="container-fluid">
+            <!-- Let's build the navbar! -->
+            <div class="row text-center" id="nav">
+                <a class="col-lg-2 nav-link stay" href="" id="nav1">HOME</a>
+                <a class="col-lg-2 nav-link" href="" id="nav2">DESTINATIONS</a>
+                <a class="col-lg-2 nav-link" href="" id="nav3">TRAVEL OPTIONS</a>
+                <a class="col-lg-2 nav-link" href="" id="nav4">ABOUT US</a>
+                <a class="col-lg-2 nav-link" href="" id="nav5">CONTACT US</a>
+                <a class="col-lg-2 nav-link" href="" id="nav6">CHECKOUT</a>
             </div>
-        </div>
         
         
         
+        
+        
+        
+        
+        </div>     
+                
         <!-- Latest compiled and minified jQuery -->
         <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/3.1.1/jquery.js"></script>
+        <script type="text/javascript" src="common-interactions.js"></script>
         <script>
-            // Testing jQuery
-            $(".test-text").addClass("test-css");
+            var current = $("#nav1");
+            var nav1 = $("#nav1");
+            var nav2 = $("#nav2");
+            var nav3 = $("#nav3");
+            var nav4 = $("#nav4");
+            var nav5 = $("#nav5");
+            var nav6 = $("#nav6");
+            nav2.click(function() {
+                current.removeClass("stay");
+                nav2.addClass("stay");
+                current = nav2;
+});
+
         </script>
     </body>
 </html>

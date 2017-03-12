@@ -1,4 +1,33 @@
+/* ids first */
+#nav
+{
+    background-color:#f58989;
+    border-radius: 7px;
+}
+
+/* classes second */
 .test-css
 {
     font-family: monospace;
+}
+.nav-link
+{
+    text-decoration: none;
+    color:#fefafa;
+}
+.nav-link:hover
+{
+    background-color: crimson;
+    color:#fefafa;
+    text-decoration: none;
+}
+.nav-link:visited
+{
+    background-color: crimson;
+    color:#fefafa;
+    text-decoration: none;
+}
+.stay
+{
+    background-color: crimson;
 }
