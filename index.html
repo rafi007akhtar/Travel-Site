@@ -18,8 +18,10 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         <!-- Own CSS stylesheet -->
         <link rel="stylesheet" href="common-styles.css">
         
-        <!-- Include FONT AWESOME icons -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+        <!-- Include FONT AWESOME icons 
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>-->
+        <title> TRANS | Home </title>
+        
     </head>
     
     <body>
@@ -39,17 +41,54 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         <div class="container">
             <!-- The home page (index.html) is written here -->
             <div class="row">
-                <h1> Welcome to Travelsita!</h1>
-                
-            </div>            
+                <h1 class="col-lg-3.5"> Welcome to TR<sub>ANS!</sub> </h1>
+                <span class="col-lg-0.5"><!-- Blank space in b/w two columns --></span>
+                <span class="col-lg-8">Here, you get all your <span class="italic-text">TRavel ANSwers</span>. From searching for the best travel options to booking tickets and checkout, we cover them all. Rest assured, you've come to the right place.</span>
+                <br>
+            </div>
+            <div class="row"> <br></div>
+            <div class="row">
+                <!-- The login/signup dialog will be written here -->
+                <div class="col-lg-3" id="login-form">
+                    <div class="row bg-success login-header container">LOGIN HERE</div>
+                    <form>
+                        <input type="text" placeholder="Enter user id" class="form-control row container" required>
+                        <input type="password" placeholder="Enter password" class="form-control row container" required>
+                        <button class="btn btn-info row container">Enter</button>
+                        <div class="row container">New user? &nbsp;<a href="#" id="signup">Sign-up here</a></div>
+                    </form>
+                </div>
+                <div class="col-lg-3" id="signup-form">
+                    <div class="row bg-info login-header container">SIGNUP HERE</div>
+                    <form>
+                        <input type="text" placeholder="Enter email id" class="form-control row container" required>
+                        <input type="password" placeholder="Enter password" class="form-control row container" required>
+                        <input type="password" placeholder="Renter password" class="form-control row container" required>
+                        <button class="btn btn-primary row container">Create Account</button>
+                        <div class="row container">Already have an account? &nbsp;<a href="#" id="login">Login here</a></div>
+                    </form>
+                </div>
+            </div>
+            
         </div>
                 
         <!-- Latest compiled and minified jQuery -->
         <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/3.1.1/jquery.js"></script>
         <script type="text/javascript" src="common-interactions.js"></script>
         <script>
-            
-
+            var signup = $("#signup");
+            var login = $("#login");
+            var form1 = $("#login-form");
+            var form2 = $("#signup-form");
+            form2.hide();
+            signup.click(function() {
+                form1.hide();
+                form2.slideToggle();
+            });
+            login.click(function() {
+                form2.hide();
+                form1.slideToggle();
+            });
         </script>
     </body>
 </html>
