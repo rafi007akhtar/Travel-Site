@@ -26,14 +26,4 @@
 {
     background-color: crimson;
 }
-.italic-text
-{
-    font-style: italic
-}
-.login-header
-{
-    border-radius: 5px;
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 1.5em;
-}
+
