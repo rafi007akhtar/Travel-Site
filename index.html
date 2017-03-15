@@ -26,9 +26,30 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         
         <!-- CSS for home page -->
         <style>
-            .home
+            .home1
             {
                 background-image: url(images/gif1.jpg);
+                background-size: cover;
+                margin: 5px;
+                border-radius: 5px;
+            }
+            .home2
+            {
+                background-image: url(images/gif2.jpg);
+                background-size: cover;
+                margin: 5px;
+                border-radius: 5px;
+            }
+            .home3
+            {
+                background-image: url(images/gif3.jpg);
+                background-size: cover;
+                margin: 5px;
+                border-radius: 5px;
+            }
+            .home4
+            {
+                background-image: url(images/gif4.jpg);
                 background-size: cover;
                 margin: 5px;
                 border-radius: 5px;
@@ -75,7 +96,7 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         </div>
         -->
         
-        <div class="container-fluid home">
+        <div class="container-fluid home1">
             <div class="row">
                 <h1 class="col-lg-3.5"> Welcome to TR<sub>ANS!</sub> </h1>
                 <span class="col-lg-0.5"><!-- Blank space in b/w two columns --></span>
@@ -104,12 +125,12 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
                 </div>
                 <div class="col-lg-2">
                     &nbsp;
-                    <a href="https://www.facebook.com" target="_blank"><button class="btn btn-primary container">Visit us on Facebook</button></a>
+                    <a href="https://www.facebook.com/travelanswerspage/" target="_blank"><button class="btn btn-primary container">Visit us on Facebook</button></a>
                     <br> &nbsp;
                     
-                    <a href="https://www.facebook.com" target="_blank"><button class="btn btn-danger container">Visit us on LinkedIn</button></a>
+                    <a href="about:blank" target="_blank"><button class="btn btn-danger container">Visit us on LinkedIn</button></a>
                     <br> &nbsp;
-                    <a href="https://www.facebook.com" target="_blank"><button class="btn btn-info container">Visit us on Twitter</button></a>
+                    <a href="about:blank" target="_blank"><button class="btn btn-info container">Visit us on Twitter</button></a>
                     <br> &nbsp;
                     <a href="https://github.com/rafi007akhtar/Travel-Site" target="_blank"><button class="btn btn-success container"> Visit us on GitHub</button> </a> <br> &nbsp;
                 </div>
@@ -125,15 +146,46 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
                     </form>
                 </div>
             </div>
-            
         </div>
+        
+        <footer class="container-fluid">
+            <!-- FOOTER begins from here -->
+            <div class="row col-lg-12">© Compiled and Coded by: </div>
+            <div class="row">
+                <div class="col-lg-6 names">MD RAFI AKHTAR</div>
+                <div class="col-lg-6">
+                    <a href="https://www.facebook.com/rafi007akhtar" target="_blank" class="knowus">Facebook,</a>
+                    <a href="https://github.com/rafi007akhtar/" target="_blank" class="knowus">GitHub,</a>
+                    <a href="https://www.linkedin.com/in/md-rafi-akhtar-46283424/" target="_blank" class="knowus">LinkedIn</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 names">TANMOY CHAKRABORTY</div>
+                <div class="col-lg-6">
+                    <a href="https://www.facebook.com/tanmoy.chakraborty.7758?fref=ts" target="_blank" class="knowus">Facebook,</a> 
+                    <a href="about:blank" target="_blank" class="knowus">GitHub,</a> 
+                    <a href="https://www.linkedin.com/in/tanmoy-chakraborty-663600120/" target="_blank" class="knowus">LinkedIn</a></div>
+            </div>
+            <div class="row col-lg-6">More info can be found in the&nbsp;<a href="" target="_blank" class="knowus">ABOUT US</a>&nbsp;section</div>
+            <br>
+            <h6 class="row col-lg-12 disclaimer">DISCLAIMER: </h6>
+            <div class="row col-lg-12 disclaimer col-xs-12">
+                All codes are written and compiled from scratch. The only libraries and frameworks used are&nbsp;<a href="https://github.com/jquery/jquery" class="knowus" target="_blank">jQuery</a>&nbsp;and&nbsp; <a href="https://github.com/twbs/bootstrap" class="knowus" target="_blank">Bootstrap.</a>&nbsp;No code has been plagiarised from elsewhere or otherwise. <br>
+            </div>
+            <div class="row col-lg-12 disclaimer col-xs-12">
+                The entire source-code of this open project can be found on the GitHub link posted in the&nbsp;<a href="" class="knowus" target="_blank">HOME</a>&nbsp;page. <br>
+            </div>
+            <div class="row col-lg-12 disclaimer col-xs-12">
+                <u>Website made for a contest.</u>                
+            </div>
+        </footer>        
                 
         <!-- Latest compiled and minified jQuery -->
         <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/3.1.1/jquery.js"></script>
         <script type="text/javascript" src="common-interactions.js"></script>
         <script>
-            // setting the login interactions
             
+            
+            // setting the login interactions
             $("#login-form").on("submit", function(event) {
                 event.preventDefault;
                 var id = document.getElementById("login-id");
@@ -165,18 +217,28 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
                         msg = msg + "Invalid DOB";
                     alert(msg);
                 }
-            });
+            });    
             
             // setting the image slideshow in homepage
-            var gif1 = $("#gif1");
-            var gif2 = $("#gif2");
-            var gif3 = $("#gif3");
-            var gif4 = $("#gif4");
-            gif2.hide();
-            gif3.hide();
-            gif4.hide();
-            
-            
+            /*$(document).ready(function() {
+                var home = $(".home1");
+                var now = new Date().getTime();
+                var i = 1;
+                while(true)
+                {
+                    var then = new Date().getTime();
+                    if (then - now >= 3000)
+                    {
+                        home.removeClass("home"+i);
+                        if(i === 4)
+                            i = 0;
+                        else
+                            i++;
+                        home.addClass("home"+i);
+                        now = new Date().getTime();
+                    }
+                }
+            }*/
             
         </script>
     </body>

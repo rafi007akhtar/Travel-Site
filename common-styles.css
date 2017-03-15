@@ -1,12 +1,36 @@
+/* tags 0th */
+
+footer
+{
+    background-color: #afa1a1;
+}
+
 /* ids first */
 #nav
 {
-    background-color:#f58989;
+    background-color: #f58989;
     border-radius: 7px;
 }
 
 
 /* classes second */
+.names
+{
+    font-family: serif;
+    font-weight: 800;
+}
+.knowus
+{
+    color: aliceblue;
+}
+.knowus:hover
+{
+    color:#dc0e0e;
+}
+.disclaimer
+{
+    font-size: 13px;
+}
 .test-css
 {
     font-family: monospace;
