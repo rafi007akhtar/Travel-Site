@@ -26,6 +26,14 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         
         <!-- CSS for home page -->
         <style>
+            .home
+            {
+                background-image: url(images/gif1.jpg);
+                background-size: cover;
+                margin: 5px;
+                border-radius: 5px;
+            }
+            
             .italic-text
             {
                 font-style: italic
@@ -57,15 +65,17 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         
         <!-- The home page (index.html) is written here -->
         
+        <!--
         <div class="container-fluid">
-            <!-- Images slideshow will be shown here -->
+            <!-- Images slideshow will be shown here 
             <img src="images/gif1.jpg" class="img-responsive col-lg-12" height="500px" id="gif1">
             <img src="images/gif2.JPG" class="img-responsive col-lg-12" height="500px" id="gif2">
             <img src="images/gif3.JPG" class="img-responsive col-lg-12" height="500px" id="gif3">
             <img src="images/gif4.JPG" class="img-responsive col-lg-12" height="500px" id="gif4">            
         </div>
+        -->
         
-        <div class="container">
+        <div class="container-fluid home">
             <div class="row">
                 <h1 class="col-lg-3.5"> Welcome to TR<sub>ANS!</sub> </h1>
                 <span class="col-lg-0.5"><!-- Blank space in b/w two columns --></span>
@@ -75,25 +85,43 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
             <div class="row"> <br></div>
             <div class="row">
                 <!-- The login/signup dialog will be written here -->
-                <div class="col-lg-3" id="login-form">
-                    <div class="row bg-success login-header container">LOGIN HERE</div>
-                    <form>
-                        <input type="text" placeholder="Enter user id / email" class="form-control row container" required>
-                        <input type="password" placeholder="Enter password" class="form-control row container" required>
-                        <button class="btn btn-info row container">Enter</button>
-                        <div class="row container">New user? &nbsp;<a href="#" id="signup">Sign-up here</a></div>
+                <div class="col-lg-5" id="login-form">
+                    <form id="login-form">
+                        <div class="bg-success login-header text-center">HAVE AN ACCOUNT? LOGIN HERE</div>
+                        <input type="text" placeholder="Enter user id / email" class="form-control" required id="login-id">
+                        <input type="password" placeholder="Enter password" class="form-control" required var="login-password">
+                        <button class="btn btn-info container" type="submit" id="login-submit">Enter</button> <br> &nbsp;
                     </form>
-                </div>
-                <div class="col-lg-3" id="signup-form">
-                    <div class="row bg-info login-header container">SIGNUP HERE</div>
                     <form>
-                        <input type="text" placeholder="Enter full name" class="form-control row container" required id="name">
-                        <input type="date" placeholder="Enter date of birth" class="form-control row container" required id="dob">
-                        <input type="email" placeholder="Enter email id" class="form-control row container" required id="mail">
-                        <input type="password" placeholder="Enter password" class="form-control row container" required id="pass1">
-                        <input type="password" placeholder="Re-enter password" class="form-control row container" required id="pass2">
-                        <button class="btn btn-primary row container" id="create">Create Account</button>
-                        <div class="row container">Have an account? &nbsp;<a href="#" id="login">Login here</a></div>
+                        <div class="bg-primary login-header text-center">FORGOT PASSWORD?</div>
+                        <input type="email" placeholder="Enter email here" class="form-control" required id="forgot-email">
+                        <input type="date" placeholder="Enter your date of birth" class="form-control" id="forgot-dob" required>
+                        <button class="btn btn-success container" type="submit" id="forgot">Get password reset email</button> &nbsp;
+                        
+                    </form>
+                    <br> <br>
+                    
+                </div>
+                <div class="col-lg-2">
+                    &nbsp;
+                    <a href="https://www.facebook.com" target="_blank"><button class="btn btn-primary container">Visit us on Facebook</button></a>
+                    <br> &nbsp;
+                    
+                    <a href="https://www.facebook.com" target="_blank"><button class="btn btn-danger container">Visit us on LinkedIn</button></a>
+                    <br> &nbsp;
+                    <a href="https://www.facebook.com" target="_blank"><button class="btn btn-info container">Visit us on Twitter</button></a>
+                    <br> &nbsp;
+                    <a href="https://github.com/rafi007akhtar/Travel-Site" target="_blank"><button class="btn btn-success container"> Visit us on GitHub</button> </a> <br> &nbsp;
+                </div>
+                <div class="col-lg-5" id="signup-form">
+                    <form id="signup-form">
+                        <div class="bg-info login-header text-center">NEW USER? SIGNUP HERE</div>
+                        <input type="text" placeholder="Enter full name" class="form-control " required id="name">
+                        <input type="date" placeholder="Enter date of birth" class="form-control" required id="dob">
+                        <input type="email" placeholder="Enter email id" class="form-control" required id="mail">
+                        <input type="password" placeholder="Enter password" class="form-control" required id="pass1">
+                        <input type="password" placeholder="Re-enter password" class="form-control" required id="pass2">
+                        <button class="btn btn-primary  container" id="create">Create Account</button>
                     </form>
                 </div>
             </div>
@@ -104,19 +132,39 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/3.1.1/jquery.js"></script>
         <script type="text/javascript" src="common-interactions.js"></script>
         <script>
-            // setting the login/signup interactions
-            var signup = $("#signup");
-            var login = $("#login");
-            var form1 = $("#login-form");
-            var form2 = $("#signup-form");
-            form2.hide();
-            signup.click(function() {
-                form1.hide();
-                form2.slideToggle();
+            // setting the login interactions
+            
+            $("#login-form").on("submit", function(event) {
+                event.preventDefault;
+                var id = document.getElementById("login-id");
+                if(id.value !== "")
+                    alert("Invalid user id/password. No such record found in our data base");
             });
-            login.click(function() {
-                form2.hide();
-                form1.slideToggle();
+            
+            // setting the signup interactions
+            $("#signup-form").on("submit", function(event) {
+                event.preventDefault;
+                alert("Sorry! Looks like our servers are down. Please try sometime later")
+            });
+            
+            
+            // setting the forgot password alert
+            var forgot = $("#forgot");
+            forgot.click(function() {
+                var msg ="Please check your email for the reset password link. Note that you'll receive the email only if you're a member.";
+                var forg = document.getElementById("forgot-email");
+                var ford = document.getElementById("forgot-dob");
+                if(/^.\S*@{1}.\S*[.]{1}.\S*$/.test(forg.value) && ford.value !== "")
+                    alert(msg);
+                else
+                {
+                    msg = "";
+                    if (/^.\S*@{1}.\S*[.]{1}.\S*$/.test(forg.value) === false)
+                        msg = msg + "Invalid email. ";
+                    if(ford.value === "")
+                        msg = msg + "Invalid DOB";
+                    alert(msg);
+                }
             });
             
             // setting the image slideshow in homepage
@@ -127,6 +175,7 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
             gif2.hide();
             gif3.hide();
             gif4.hide();
+            
             
             
         </script>
