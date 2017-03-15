@@ -5,6 +5,7 @@
     border-radius: 7px;
 }
 
+
 /* classes second */
 .test-css
 {
@@ -15,13 +16,7 @@
     text-decoration: none;
     color:#fefafa;
 }
-.nav-link:hover
-{
-    background-color: crimson;
-    color:#fefafa;
-    text-decoration: none;
-}
-.nav-link:visited
+.nav-link:hover, .nav-link:visited, .nav-link:active, .nav-link:focus
 {
     background-color: crimson;
     color:#fefafa;
