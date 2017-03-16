@@ -16,7 +16,9 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         
         <!-- Latest compiled and minified Bootstrap -->
         <link rel="stylesheet" href="http://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-        
+        <!--
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+       
         <!-- Own CSS stylesheet -->
         <link rel="stylesheet" href="common-styles.css">
         
@@ -82,20 +84,45 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         
     </head>
     
-    <body>
-        <div class="container-fluid">
-            <!-- Let's build the navbar! -->
-            <div class="row text-center" id="nav">
-                <div class="col-lg-2 col-xs-12"  id="logo-img"> Logo placeholder </div>
-                <a class="col-lg-2 col-xs-12 nav-link stay" href="#" id="nav1"> HOME</a>
-                <a class="col-lg-2 col-xs-12 nav-link" href="#" id="nav2"> TRAVEL OPTIONS </a>
-                <a class="col-lg-2 col-xs-12 nav-link" href="#" id="nav3"> ABOUT US </a>
-                <a class="col-lg-2 col-xs-12 nav-link" href="#" id="nav4"> CONTACT US </a>
-                <a class="col-lg-2 col-xs-12 nav-link" href="#" id="nav5"> CHECKOUT </a>
-            </div>
-            <!-- The navbar ends here -->
+    <body>    
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img class="img-resposive thumbnail" src="images/dp.png" height="30px" width="70px"> TRANS - Travel Answers</a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="travel.html">TRAVEL OPTIONS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CHECKOUT</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">CONTACT US</a>
+              </li>
+            </ul>
+
+          </div>
+        </nav>
+        
+        <div class="container">
+            <div class="row"> &nbsp; </div>
+            <div class="row"> &nbsp; </div>
+            <div class="row">  </div>
         </div>
         
+
+        <!-- The navbar ends here -->
+        
+
         <!-- The home page (index.html) is written here -->
         
         <!--
@@ -107,6 +134,7 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
             <img src="images/gif4.JPG" class="img-responsive col-lg-12" height="500px" id="gif4">            
         </div>
         -->
+        
         
         <div class="container-fluid home1">
             <div class="row">
@@ -132,8 +160,8 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
                         <input type="email" placeholder="Enter email here" class="form-control" required id="forgot-email">
                         <input type="number" placeholder="Enter CAPTCHA here" required class="form-control" id="cap-text">
                         <div class="row container-fluid">
-                            <button class="btn col-lg-4" id="gen-captcha" type="button">Refresh CAPTCHA</button>
-                            <div id="captcha" class="col-lg-8"></div>
+                            <button class="btn col-lg-8 col-md-12" id="gen-captcha" type="button">Refresh CAPTCHA</button>
+                            <div id="captcha" class="col-lg-4 col-md-12"></div>
                         </div>
                         <button class="btn btn-warning container" type="submit" id="forgot">Get password reset email</button> &nbsp;
                     </form>

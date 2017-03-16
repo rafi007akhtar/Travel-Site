@@ -1,14 +1,13 @@
-
-
 /* ids first */
-#nav
+/*#nav
 {
     background-color: #f58989;
     border-radius: 7px;
-}
+}*/
 
 
 /* classes second */
+
 .foot
 {
     background-color: #afa1a1;
@@ -38,7 +37,7 @@
 {
     font-family: monospace;
 }
-.nav-link
+/*.nav-link
 {
     text-decoration: none;
     color:#fefafa;
@@ -48,7 +47,7 @@
     background-color: crimson;
     color:#fefafa;
     text-decoration: none;
-}
+}*/
 .stay
 {
     background-color: crimson;
