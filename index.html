@@ -26,6 +26,18 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         
         <!-- CSS for home page -->
         <style>
+            
+            #captcha
+            {
+                border: 1px solid black;
+                border-radius: 7px;
+                padding: 5px;
+                text-align: center;
+                font-family: fantasy;
+                font-size: 1.5em;
+                background-color: #f0cf93;
+            }
+            
             .home1
             {
                 background-image: url(images/gif1.jpg);
@@ -98,31 +110,37 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         
         <div class="container-fluid home1">
             <div class="row">
-                <h1 class="col-lg-3.5"> Welcome to TR<sub>ANS!</sub> </h1>
+                <h1 class="col-lg-3.5"> Welcome to TR<sub>ANS</sub>! </h1>
                 <span class="col-lg-0.5"><!-- Blank space in b/w two columns --></span>
                 <span class="col-lg-8">Here, you get all your <span class="italic-text">TRavel ANSwers</span>. From searching for the best travel options to booking tickets and checkout, we cover them all. Rest assured, you've come to the right place.</span>
                 <br>
             </div>
             <div class="row"> <br></div>
             <div class="row">
-                <!-- The login/signup dialog will be written here -->
-                <div class="col-lg-5" id="login-form">
+                <!-- The login form will be written here -->
+                <div class="col-lg-5">
                     <form id="login-form">
                         <div class="bg-success login-header text-center">HAVE AN ACCOUNT? LOGIN HERE</div>
                         <input type="text" placeholder="Enter user id / email" class="form-control" required id="login-id">
                         <input type="password" placeholder="Enter password" class="form-control" required var="login-password">
                         <button class="btn btn-info container" type="submit" id="login-submit">Enter</button> <br> &nbsp;
                     </form>
+                    
+                    <!-- the "forgot password" form is written down below -->
                     <form>
                         <div class="bg-primary login-header text-center">FORGOT PASSWORD?</div>
                         <input type="email" placeholder="Enter email here" class="form-control" required id="forgot-email">
-                        <input type="date" placeholder="Enter your date of birth" class="form-control" id="forgot-dob" required>
-                        <button class="btn btn-success container" type="submit" id="forgot">Get password reset email</button> &nbsp;
-                        
+                        <input type="number" placeholder="Enter CAPTCHA here" required class="form-control" id="cap-text">
+                        <div class="row container-fluid">
+                            <button class="btn col-lg-4" id="gen-captcha" type="button">Refresh CAPTCHA</button>
+                            <div id="captcha" class="col-lg-8"></div>
+                        </div>
+                        <button class="btn btn-warning container" type="submit" id="forgot">Get password reset email</button> &nbsp;
                     </form>
                     <br> <br>
-                    
                 </div>
+                
+                <!-- A couple of visiting links to show-off! -->
                 <div class="col-lg-2">
                     &nbsp;
                     <a href="https://www.facebook.com/travelanswerspage/" target="_blank"><button class="btn btn-primary container">Visit us on Facebook</button></a>
@@ -134,7 +152,9 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
                     <br> &nbsp;
                     <a href="https://github.com/rafi007akhtar/Travel-Site" target="_blank"><button class="btn btn-success container"> Visit us on GitHub</button> </a> <br> &nbsp;
                 </div>
-                <div class="col-lg-5" id="signup-form">
+                
+                <!-- The signup form - the last form in the home page -->
+                <div class="col-lg-5">
                     <form id="signup-form">
                         <div class="bg-info login-header text-center">NEW USER? SIGNUP HERE</div>
                         <input type="text" placeholder="Enter full name" class="form-control " required id="name">
@@ -148,22 +168,30 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
             </div>
         </div>
         
-        <footer class="container-fluid">
-            <!-- FOOTER begins from here -->
+        <!-- FOOTER begins from here -->
+        <footer class="container-fluid foot">
             <div class="row col-lg-12">© Compiled and Coded by: </div>
             <div class="row">
-                <div class="col-lg-6 names">MD RAFI AKHTAR</div>
-                <div class="col-lg-6">
-                    <a href="https://www.facebook.com/rafi007akhtar" target="_blank" class="knowus">Facebook,</a>
-                    <a href="https://github.com/rafi007akhtar/" target="_blank" class="knowus">GitHub,</a>
-                    <a href="https://www.linkedin.com/in/md-rafi-akhtar-46283424/" target="_blank" class="knowus">LinkedIn</a></div>
+                <div class="col-lg-3 names">MD RAFI AKHTAR</div>
+                <div class="col-lg-9">
+                    <button class="btn btn-sm dropdown-toggle" id="rafisocial" data-toggle="dropdown"> Visit Me </button>
+                    <ul class="dropdown-menu" aria-labelled-by="rafisocial">
+                        <li><a href="https://www.facebook.com/rafi007akhtar" target="_blank" class="knowme btn">Facebook</a></li>
+                        <li><a href="https://github.com/rafi007akhtar/" target="_blank" class="knowme btn">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/md-rafi-akhtar-46283424/" target="_blank" class="knowme btn">LinkedIn</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 names">TANMOY CHAKRABORTY</div>
-                <div class="col-lg-6">
-                    <a href="https://www.facebook.com/tanmoy.chakraborty.7758?fref=ts" target="_blank" class="knowus">Facebook,</a> 
-                    <a href="about:blank" target="_blank" class="knowus">GitHub,</a> 
-                    <a href="https://www.linkedin.com/in/tanmoy-chakraborty-663600120/" target="_blank" class="knowus">LinkedIn</a></div>
+                <div class="col-lg-3 names">TANMOY CHAKRABORTY</div>
+                <div class="col-lg-9">
+                    <button class="btn btn-sm dropdown-toggle" data-toggle="dropdown" id="tcsocial"> Visit Me </button>
+                    <ul class="dropdown-menu" aria-labelled-by="tcsocial">
+                        <li><a href="https://www.facebook.com/tanmoy.chakraborty.7758?fref=ts" target="_blank" class="knowme btn">Facebook</a> </li>
+                        <li><a href="about:blank" target="_blank" class="knowme btn">GitHub</a> </li>
+                        <li><a href="https://www.linkedin.com/in/tanmoy-chakraborty-663600120/" target="_blank" class="knowme btn">LinkedIn</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="row col-lg-6">More info can be found in the&nbsp;<a href="" target="_blank" class="knowus">ABOUT US</a>&nbsp;section</div>
             <br>
@@ -181,6 +209,9 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
                 
         <!-- Latest compiled and minified jQuery -->
         <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/3.1.1/jquery.js"></script>
+        <!-- Latest compiled and minified Bootstrap JS -->
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+        
         <script type="text/javascript" src="common-interactions.js"></script>
         <script>
             
@@ -201,23 +232,38 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
             
             
             // setting the forgot password alert
+            var cap = ""; // generating CAPTCHA first
+            var captcha = $("#captcha");
+            var gencaptcha = function(cap)
+            {
+                cap = "";
+                cap = cap + Math.floor(Math.random()*10) + Math.floor(Math.random()*10) + Math.floor(Math.random()*10) + Math.floor(Math.random()*10);
+                captcha.text(cap);
+                return cap;
+            };
+            cap = gencaptcha(cap);
+            $("#gen-captcha").on("click", function(event) {
+                event.preventDefault;
+                cap = gencaptcha(cap);
+            });
+            // now set what the submit button does
             var forgot = $("#forgot");
             forgot.click(function() {
                 var msg ="Please check your email for the reset password link. Note that you'll receive the email only if you're a member.";
                 var forg = document.getElementById("forgot-email");
-                var ford = document.getElementById("forgot-dob");
-                if(/^.\S*@{1}.\S*[.]{1}.\S*$/.test(forg.value) && ford.value !== "")
+                var captext = document.getElementById("cap-text");
+                if(/^.\S*@{1}.\S*[.]{1}.\S*$/.test(forg.value) && captext.value === cap)
                     alert(msg);
                 else
                 {
                     msg = "";
                     if (/^.\S*@{1}.\S*[.]{1}.\S*$/.test(forg.value) === false)
                         msg = msg + "Invalid email. ";
-                    if(ford.value === "")
-                        msg = msg + "Invalid DOB";
+                    if(captext.value !== cap)
+                        msg = msg + "Incorrect CAPTCHA";
                     alert(msg);
                 }
-            });    
+            });
             
             // setting the image slideshow in homepage
             /*$(document).ready(function() {

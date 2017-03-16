@@ -1,9 +1,4 @@
-/* tags 0th */
 
-footer
-{
-    background-color: #afa1a1;
-}
 
 /* ids first */
 #nav
@@ -14,10 +9,18 @@ footer
 
 
 /* classes second */
+.foot
+{
+    background-color: #afa1a1;
+}
 .names
 {
     font-family: serif;
     font-weight: 800;
+}
+.knowme
+{
+    color: #000000;
 }
 .knowus
 {
@@ -25,7 +28,7 @@ footer
 }
 .knowus:hover
 {
-    color:#dc0e0e;
+    color: aliceblue;
 }
 .disclaimer
 {
