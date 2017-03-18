@@ -27,52 +27,7 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         <!-- CSS for travel page -->
         <style>
             
-            /* The CSS you write for THIS page (travel.html) goes in here */            
-            form { 
-                    margin: 0 auto; 
-                    width:250px;
-                }
-            .pull-me{
-                    -webkit-box-shadow: 0 0 8px #FFD700;
-                    -moz-box-shadow: 0 0 8px #FFD700;
-                    box-shadow: 0 0 8px #FFD700;
-                    cursor:pointer;
-                }
-            #checkout-form {
-                    box-shadow: 10px 10px 5px #888888;
-                    background-size:90% 90%;
-                    height:300px;
-                    display:none;
-                    font-family:garamond,times-new-roman,serif;
-                }
-
-            .slide {
-                    margin:0;
-                    padding:0;
-                    border-top:solid 2px #cc0000;
-                }
-            .pull-me {
-                    display:block;
-                    position:relative;
-                    right:-25px;
-                    width:150px;
-                    height:20px;
-                    font-family:arial,sans-serif;
-                    font-size:14px;
-                    color:#ffffff;
-                    background:#cc0000;
-                    text-decoration:none;
-                    -moz-border-bottom-left-radius:5px;
-                    -moz-border-bottom-right-radius:5px;
-                    border-bottom-left-radius:5px;
-                    border-bottom-right-radius:5px;
-                }
-            .travel-back {
-                    background-image: url(images/gif3.JPG);
-                    background-size: cover;
-                    margin: 5px;
-                    border-radius: 5px;
-                    }
+           
         </style>
         
     </head>
@@ -82,7 +37,7 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="#"><img class="img-resposive thumbnail" src="images/dp.png" height="30px" width="70px"> TRANS - Travel Answers</a>
+          <a class="navbar-brand" href="#"> TRANS - Travel Answers</a>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -108,30 +63,7 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         
         <!-- The navbar ends here -->
         
-        <div class="container-fluid travel-back">
-            <br> <br>
-            <!-- Your BODY code - besides the navbar and footer - gets in here -->
-            
-            <form id="checkout-form">
-                <div class="bg-info login-header text-center">BOOK YOUR HOTEL HERE</div>
-                <input type="text" placeholder="Origin" class="form-control " required id="orig">
-                <input type="text" placeholder="Destination" class="form-control " required id="dest">
-                <label>depart date</label>
-                <input type="date" placeholder="depart date " class="form-control" required id="dep_date">
-                <label>return date</label>
-                <input type="date" placeholder="return date " class="form-control" required id="ret_date">
-                <select class="seat">
-                    <option>1 Traveller(s)/Economy</option>
-                    <option>1 Adult(s)/Economy</option>
-                    <option>0 child(s)/Economy</option>
-                    <option>0 infant(s)/Economy</option>
-                </select>
-                <button class="btn btn-primary  container" id="create">Create Account</button>
-            </form>
-            
-            <div class="slide"><p class="pull-me">Slide/Up Down</p></div>
-            
-        </div>
+        
         <br>
         
         <!-- FOOTER begins from here -->
@@ -148,17 +80,7 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
                     </ul>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3 names">TANMOY CHAKRABORTY</div>
-                <div class="col-lg-9">
-                    <button class="btn btn-sm dropdown-toggle" data-toggle="dropdown" id="tcsocial"> Visit Me </button>
-                    <ul class="dropdown-menu" aria-labelled-by="tcsocial">
-                        <li><a href="https://www.facebook.com/tanmoy.chakraborty.7758?fref=ts" target="_blank" class="knowme btn">Facebook</a> </li>
-                        <li><a href="about:blank" target="_blank" class="knowme btn">GitHub</a> </li>
-                        <li><a href="https://www.linkedin.com/in/tanmoy-chakraborty-663600120/" target="_blank" class="knowme btn">LinkedIn</a></li>
-                    </ul>
-                </div>
-            </div>
+            
             <div class="row col-lg-6">More info can be found in the&nbsp;<a href="" class="knowus">ABOUT US</a>&nbsp;section</div>
             <br>
             <h6 class="row col-lg-12 disclaimer">DISCLAIMER: </h6>
@@ -180,15 +102,6 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         
         <script type="text/javascript" src="common-interactions.js"></script>
         <script>
-            
-            /* The JavaScript you write for THIS page (travel.html) goes in HERE: */
-            $(document).ready(function()
-            {
-                $('.pull-me').click(function()
-                {
-                    $('#checkout-form').slideToggle('slow');
-                });
-            });
             
         </script>
     </body>
