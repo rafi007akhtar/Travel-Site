@@ -21,7 +21,7 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         <link rel="stylesheet" href="common-styles.css">
         
         <!-- Include FONT AWESOME icons --> 
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
         <title> TRANS | Travel Options </title>
         
         <!-- CSS for travel page -->
@@ -51,17 +51,23 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
                 margin: 3px;
                 padding: 9px;
             }
+            .tr-bg
+            {
+                background-color: #f1eded;
+                border-radius: 5px;
+            }
            
         </style>
         
     </head>
     
     <body>    
+        <!-- The navbar begins here -->
         <nav class="navbar navbar-toggleable-md navbar-light bg-inverse fixed-top">
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="#" style="color: #f3f5f6"> TRANS - Travel Answers</a>
+          <a class="navbar-brand" href="#" style="color: #f3f5f6">SuperTravels</a>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -84,27 +90,27 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
             <div class="row"> &nbsp; </div>
             <div class="row"> &nbsp; </div>
         </div>
+        <!-- The navbar ends here -->
         
-        <!-- The navbar ends here -->       
-        
+        <!-- sub navbar, for different travel options -->
         <div class="container-fluid">
-            <!-- sub navbar, for different travel options -->
             <div class="row travel-header text-center">
-                <a class="col-lg-4 travel-head travel-current" href="#"> 
+                <a class="col-lg-4 travel-head travel-current way1" href="#"> 
                     <i class="fa fa-plane"></i> Travel through air
                 </a>
-                <a class="col-lg-4 travel-head" href="#"> 
+                <a class="col-lg-4 travel-head way2" href="#"> 
                     <i class="fa fa-ship"></i> Travel across waters 
                 </a>
-                <a class="col-lg-4 travel-head" href="#"> 
+                <a class="col-lg-4 travel-head way3" href="#"> 
                     <i class="fa fa-train"></i> Travel in trains 
                 </a>
             </div>
         </div>
+        <br>
         
-        <div class="container">
-            <!-- Travel through flights -->
-            <p><em>The comfort of a flight. Pro tip: Keep your hands inside the window! </em></p>
+        <!-- Travel body -->
+        <div class="container tr-bg">
+            <p><em id="via">The comfort of a flight. Pro tip: Keep your hands inside the window! </em></p>
             <form class="flight-form">
                 <label>When are you departing? </label>
                 <input type="date" class="form-control">
@@ -201,8 +207,8 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header"><h1><span id="cost-msg"></span></h1></div>
-                        <div class="modal-body"><span id="cost-explain"> Cost for each adult = $300 <br>Cost of each minor = $100 <br> Total fare = total adult cost + total minor cost </span></div>
-                        <div class="modal-footer"><button class="btn" data-dismiss="modal">Sure, go for payment</button></div>
+                        <div class="modal-body"><span id="cost-explain"> Cost for each adult = $300 <br>Cost of each minor = $100 <br> Total fare = total adult cost + total minor cost + relavant taxes based on distance covered and route choses</span></div>
+                        <div class="modal-footer"><button class="btn" data-dismiss="modal" id="checkout">Got it, checkout now.</button></div>
                     </div>
                 </div>
             </div>
@@ -248,6 +254,43 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         
         <script type="text/javascript" src="common-interactions.js"></script>
         <script>
+            var routeCost = 30;
+            
+            /* interactions of sub navigation bar */
+            var current = $(".travel-current");
+            var way1 = $(".way1");
+            var way2 = $(".way2");
+            var way3 = $(".way3");
+            way1.click(function() {
+                if(current === way1)
+                    return 0;
+                current.removeClass("travel-current");
+                current = way1;
+                current.addClass("travel-current");
+                $("#via").text("The comfort of a flight. Pro tip: Keep your hands inside the window!");
+                routeCost = 30;
+            });
+            way2.click(function() {
+                if(current === way2)
+                    return 0;
+                current.removeClass("travel-current");
+                current = way2;
+                current.addClass("travel-current");
+                $("#via").text("Across the oceans, I will find thee! Amen.");
+                routeCost = 20;
+                
+            });
+            way3.click(function() {
+                if(current === way3)
+                    return 0;
+                current.removeClass("travel-current");
+                current = way3;
+                current.addClass("travel-current");
+                $("#via").text("These aren't just trains: they're super trains, capable of travelling through continents!");
+                routeCost = 10;
+            });
+            
+            /* compute the travel fare */
             var i, city1, city2;
             var cost = $("#cost");
             cost.hide();
@@ -311,17 +354,20 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
                 city2 = 5;
             });
             
-            // compute cost
+            /* compute cost */
             $("#cost").on("click", function(event) {
                 var ad = document.getElementById("adult").value;
-                console.log(ad);
                 var ch = document.getElementById("child").value;
-                console.log(ch);
                 dist = Math.abs(city2 - city1);
-                console.log(city1+"\n"+city2);
                 var costs = (ad*300*dist) + (ch*100*dist);
-                console.log(dist+"\n"+costs);
+                if(costs !== 0)
+                    costs += routeCost
                 $("#cost-msg").text("Your total fare is $"+costs);
+            });
+            
+            /* checkout */
+            $("#checkout").on("click", function(event) {
+                alert("Thanks for reaching out to us. You'll be contacted soon for your travels. Have a safe journey");                
             });
             
         </script>
