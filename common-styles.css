@@ -33,33 +33,4 @@
 {
     font-size: 13px;
 }
-.test-css
-{
-    font-family: monospace;
-}
-/*.nav-link
-{
-    text-decoration: none;
-    color:#fefafa;
-}
-.nav-link:hover, .nav-link:visited, .nav-link:active, .nav-link:focus
-{
-    background-color: crimson;
-    color:#fefafa;
-    text-decoration: none;
-}*/
-.stay
-{
-    background-color: crimson;
-}
-.italic-text
-{
-    font-style: italic
-}
-.login-header
-{
-    border-radius: 5px;
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 1.5em;
-}
+
