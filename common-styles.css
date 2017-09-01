@@ -25,21 +25,6 @@
 {
     color: aliceblue;
 }
-<<<<<<< HEAD
-
-||||||| merged common ancestors
-.italic-text
-{
-    font-style: italic
-}
-.login-header
-{
-    border-radius: 5px;
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 1.5em;
-}
-=======
 .knowus:hover
 {
     color: aliceblue;
@@ -49,4 +34,3 @@
     font-size: 13px;
 }
 
->>>>>>> optimized
