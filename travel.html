@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<!--
+CONTEST STRUCTURE:
+
+Home page: Default introductory page of the website. (Pic 1 & Pic 2)
+About Us page: A brief description about the agency. (Pic 3)
+Contact Us page: Contact details about the agency. Some fields where a person can send queries. (Pic 4)
+Destination page: Details about the tour packages. (Pic 5)
+Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <!-- Latest compiled and minified Bootstrap -->
+        <link rel="stylesheet" href="http://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+       
+        <!-- Own CSS stylesheet -->
+        <link rel="stylesheet" href="common-styles.css">
+        
+        <!-- Include FONT AWESOME icons --> 
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <title> TRANS | Travel Options </title>
+        
+        <!-- CSS for travel page -->
+        <style>
+            .travel-header
+            {
+                background-color: #eba328; 
+                border-radius: 7px;
+            }
+            .travel-head
+            {
+                color: #334e0d;
+            }
+            .travel-head:hover
+            {
+                color: #9e481e;
+                text-decoration: none;
+            }
+            .travel-current
+            {
+                color: #9e481e;
+            }
+            .city
+            {
+                background-color: #e8a058;
+                font-family: cursive;
+                margin: 3px;
+                padding: 9px;
+            }
+            .tr-bg
+            {
+                background-color: #f1eded;
+                border-radius: 5px;
+            }
+           
+        </style>
+        
+    </head>
+    
+    <body>    
+        <!-- The navbar begins here -->
+        <nav class="navbar navbar-toggleable-md navbar-light bg-inverse fixed-top">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color: #f3f5f6">SuperTravels</a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" style="color: #cbd5c7">HOME </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="travel.html" style="color: #ccdada; border: 1px solid #ccdada">TRAVEL OPTIONS<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html" style="color: #cbd5c7">ABOUT US</a>
+              </li>
+            </ul>
+
+          </div>
+        </nav>
+        
+        <div class="container">
+            <div class="row"> &nbsp; </div>
+            <div class="row"> &nbsp; </div>
+            <div class="row"> &nbsp; </div>
+        </div>
+        <!-- The navbar ends here -->
+        
+        <!-- sub navbar, for different travel options -->
+        <div class="container-fluid">
+            <div class="row travel-header text-center">
+                <a class="col-lg-4 travel-head travel-current way1" href="#"> 
+                    <i class="fa fa-plane"></i> Travel through air
+                </a>
+                <a class="col-lg-4 travel-head way2" href="#"> 
+                    <i class="fa fa-ship"></i> Travel across waters 
+                </a>
+                <a class="col-lg-4 travel-head way3" href="#"> 
+                    <i class="fa fa-train"></i> Travel in trains 
+                </a>
+            </div>
+        </div>
+        <br>
+        
+        <!-- Travel body -->
+        <div class="container tr-bg">
+            <p><em id="via">The comfort of a flight. Pro tip: Keep your hands inside the window! </em></p>
+            <form class="flight-form">
+                <label>When are you departing? </label>
+                <input type="date" class="form-control">
+                <label>How many adult members (aged 18 and aboove) are going (yourself included)? </label>
+                <input type="number" class="form-control" id="adult">
+                <label>How many minors (below age 17) are going (yourself included)? </label>
+                <input type="number" class="form-control" id="child">
+                
+                <label>Enter the city you're departing from: </label>
+                <button class="btn btn-primary btn-sm dropdown-toggle" id="depart" data-toggle="dropdown"> Leave Me </button>
+                    <ul class="dropdown-menu" aria-labelled-by="depart">
+                        <li><a class="knowme btn" id="gotham-dep" href="#"> <i class="fa fa-bold"></i> Gotham</a></li>
+                        <li><a href="#" class="knowme btn" id="met-dep"> <i class="fa fa-scribd"></i> Metropolis</a></li>
+                        <li> <a href="#" class="knowme btn" id="the-dep"><i class="fa fa-wordpress" ></i> Themyscira</a></li>
+                        <li><a href="#" class="knowme btn" id="cen-dep"><i class="fa fa-bolt"> </i> Central City</a></li>
+                        <li><a href="#" class="knowme btn" id="sta-dep"> <i class="fa fa-long-arrow-right"> </i> Star City</a></li>
+                    </ul>
+            </form>
+            
+            <div class="city city1" id="got1">
+                <p>Departing city from: Gotham</p>
+                <img src="images/gotham.jpg" alt="The city of Gotham" class="img-responsive col-lg-12" style="margin: -7px"> <br> &nbsp;
+                <p>The origins of Gotham City are some shrouded in mystery. Many millenniums ago, an evil warlock was buried alive beneath what would one day become the central island of Gotham. It is alleged that while the warlock laid in a state of torpor, his evil essence seeped into the soil, poisoning the ground with his dark, corrupt touch. By the warlock's own reasoning, he claims that he fathered the modern spirit of Gotham City and has even taken to calling himself Doctor Gotham.</p>
+            </div>
+            
+            <div class="city city2" id="met1">
+                <p>Departing from city: Metropolis</p>
+                <img src="images/met.JPG" alt="The city of Metropolis" class="img-responsive col-lg-12" style="margin: -7px"> <br> &nbsp;
+                <p>Metropolis is one of the largest and most well-known cities in the United States, owing largely to the fact that it is the adopted home town of Metropolis' favorite son, Superman. The history of Metropolis stretches back to the year 1542 when Italian navigator Vincenzo Gnanatti discovered the region while in the employ of the Dutch. Prior to European colonization, the region was occupied by the Algonquin Native American tribe. It wasn't until 1634 however that the first settlement was established by Dutchman Paul De Vries. The settlement was named De Vries Village and occupies the neighborhood now known as "Old City" in the Eastern section of Queensland Park. Throughout the 17th and 18th centuries, De Vries Village prospered as a thriving seaport and it became an integral strategic location for General George Washington's army during the Revolutionary War.</p>
+            </div>
+            
+            <div class="city city3" id="the1">
+                <p>Departing from city: Themyscira</p>
+                <img src="images/themyscira.JPG" alt="Themyscira" class="img-responsive col-lg-12" style="margin: -7px"> <br> &nbsp;
+                <p>Themyscira is a fictional, lush island nation on Earth, appearing in American comic books published by DC Comics. The island is the place of origin of Wonder Woman and her sister Amazons. Originally known as Paradise Island, it was renamed "Themyscira". The island is named after the mythological city of Themiscyra, the capital of the Amazon tribe in Greek mythology. It is also sometimes presented that Themyscira is the capital city and Paradise Island is the entire island nation. </p>
+            </div>
+            
+            <div class="city city4" id="cen1">
+                <p>Departing from city: Central City</p>
+                <img src="images/central.jpg" alt="Central City" class="img-responsive col-lg-12" style="margin: -7px"> <br> &nbsp;
+                <p>While there are many Central Cities in the real United States, the one that Barry Allen runs around in both comics and CW TV show is a fictional city located on the edge of the state of Missouri (as per not only current comic book continuity, but also references in The Flash TV show and Young Justice animated series), although it once belonged in Ohio (1974's The Flash No. 228 and 1987's The Flash Vol. 2 No. 2 both made that claim) and, in 2004's DC: The New Frontier, in Illinois. Its real-world analog would be Kansas City, given that Central City is paired with Keystone City, which exists just across the water in Kansas. Quite how that works with the oft-stated assertion that Central City and Star City are only 600 miles apart is anyone's guess (Kansas City is around 1,500 miles from San Francisco). Let's just pretend that, while DC's comic book Earth is larger than ours, the CW's Arrow/Flashverse United States is somehow smaller. Or, perhaps, has a surprisingly different geography with regards to where the states actually lie in relation to each other. </p>
+            </div>
+            
+            <div class="city city5" id="sta1">
+                <p>Departing from city: Star City</p>
+                <img src="images/star.png" alt="Central City" class="img-responsive col-lg-12" style="margin: -7px"> <br> &nbsp;
+                <p>DC's other home to fake tales of San Francisco is Green Arrow's hometown — temporarily renamed Starling City in the early seasons of the CW's Arrow, although it's been called Star City in comic book mythology since its 1941 introduction in More Fun Comics No. 73. A port city located somewhere on the west coast of the United States in its current comic book incarnation, its location hasn't always been so clear; 1985's DC Comics Presents No. 87 saw Superman cross over to our world and note that Star City had been replaced by Boston, while earlier references to its comic book location had suggested both Connecticut and somewhere in the region of the Great Lakes. (To make the matter more complicated, an onscreen map that appeared on an episode of Arrow suggested that Star City was actually Des Moines, Iowa, even though the show has repeated talked about the city being on the Western Seaboard.)</p>
+            </div>
+            
+            <form class="flight-form" id="flight-form">
+                <label>Enter the city you're entering: </label>
+                <button class="btn btn-primary btn-sm dropdown-toggle" id="arrive" data-toggle="dropdown"> Visit Me </button>
+                    <ul class="dropdown-menu" aria-labelled-by="depart">
+                        <li><a href="#" class="knowme btn" id="gotham-arr"><i class="fa fa-bold"></i> Gotham</a></li>
+                        <li><a href="#" class="knowme btn" id="met-arr"><i class="fa fa-scribd"></i> Metropolis</a></li>
+                        <li><a href="#" class="knowme btn" id="the-arr"><i class="fa fa-wordpress"></i> Themyscira</a></li>
+                        <li><a href="#" class="knowme btn" id="cen-arr"><i class="fa fa-bolt"></i> Central City</a></li>
+                         <li><a href="#" class="knowme btn" id="sta-arr"><i class="fa fa-long-arrow-right"></i> Star City</a></li>
+                    </ul>
+            </form>
+            
+            <div class="city city6" id="got2">
+                <p>Arriving to city: Gotham</p>
+                <img src="images/gotham.jpg" alt="The city of Gotham" class="img-responsive col-lg-12" style="margin: -7px"> <br> &nbsp;
+                <p>The origins of Gotham City are some shrouded in mystery. Many millenniums ago, an evil warlock was buried alive beneath what would one day become the central island of Gotham. It is alleged that while the warlock laid in a state of torpor, his evil essence seeped into the soil, poisoning the ground with his dark, corrupt touch. By the warlock's own reasoning, he claims that he fathered the modern spirit of Gotham City and has even taken to calling himself Doctor Gotham.</p>
+            </div>
+            
+            <div class="city city7" id="met2">
+                <p>Arriving to city: Metropolis</p>
+                <img src="images/met.JPG" alt="The city of Metropolis" class="img-responsive col-lg-12" style="margin: -7px"> <br> &nbsp;
+                <p>Metropolis is one of the largest and most well-known cities in the United States, owing largely to the fact that it is the adopted home town of Metropolis' favorite son, Superman. The history of Metropolis stretches back to the year 1542 when Italian navigator Vincenzo Gnanatti discovered the region while in the employ of the Dutch. Prior to European colonization, the region was occupied by the Algonquin Native American tribe. It wasn't until 1634 however that the first settlement was established by Dutchman Paul De Vries. The settlement was named De Vries Village and occupies the neighborhood now known as "Old City" in the Eastern section of Queensland Park. Throughout the 17th and 18th centuries, De Vries Village prospered as a thriving seaport and it became an integral strategic location for General George Washington's army during the Revolutionary War.</p>
+            </div>
+            
+            <div class="city city8" id="the2">
+                <p>Arriving to city: Themyscira</p>
+                <img src="images/themyscira.JPG" alt="Themyscira" class="img-responsive col-lg-12" style="margin: -7px"> <br> &nbsp;
+                <p>Themyscira is a fictional, lush island nation on Earth, appearing in American comic books published by DC Comics. The island is the place of origin of Wonder Woman and her sister Amazons. Originally known as Paradise Island, it was renamed "Themyscira". The island is named after the mythological city of Themiscyra, the capital of the Amazon tribe in Greek mythology. It is also sometimes presented that Themyscira is the capital city and Paradise Island is the entire island nation. </p>
+            </div>
+            
+            <div class="city city9" id="cen2">
+                <p>Arriving to city: Central City</p>
+                <img src="images/central.jpg" alt="Central City" class="img-responsive col-lg-12" style="margin: -7px"> <br> &nbsp;
+                <p>While there are many Central Cities in the real United States, the one that Barry Allen runs around in both comics and CW TV show is a fictional city located on the edge of the state of Missouri (as per not only current comic book continuity, but also references in The Flash TV show and Young Justice animated series), although it once belonged in Ohio (1974's The Flash No. 228 and 1987's The Flash Vol. 2 No. 2 both made that claim) and, in 2004's DC: The New Frontier, in Illinois. Its real-world analog would be Kansas City, given that Central City is paired with Keystone City, which exists just across the water in Kansas. Quite how that works with the oft-stated assertion that Central City and Star City are only 600 miles apart is anyone's guess (Kansas City is around 1,500 miles from San Francisco). Let's just pretend that, while DC's comic book Earth is larger than ours, the CW's Arrow/Flashverse United States is somehow smaller. Or, perhaps, has a surprisingly different geography with regards to where the states actually lie in relation to each other. </p>
+            </div>
+            
+            <div class="city city10" id="sta2">
+                <p>Arriving to city: Star City</p>
+                <img src="images/star.png" alt="Central City" class="img-responsive col-lg-12" style="margin: -7px"> <br> &nbsp;
+                <p>DC's other home to fake tales of San Francisco is Green Arrow's hometown — temporarily renamed Starling City in the early seasons of the CW's Arrow, although it's been called Star City in comic book mythology since its 1941 introduction in More Fun Comics No. 73. A port city located somewhere on the west coast of the United States in its current comic book incarnation, its location hasn't always been so clear; 1985's DC Comics Presents No. 87 saw Superman cross over to our world and note that Star City had been replaced by Boston, while earlier references to its comic book location had suggested both Connecticut and somewhere in the region of the Great Lakes. (To make the matter more complicated, an onscreen map that appeared on an episode of Arrow suggested that Star City was actually Des Moines, Iowa, even though the show has repeated talked about the city being on the Western Seaboard.)</p>
+            </div>
+                                 
+            <input type="button" class="form-control btn btn-success" value="Compute cost" id="cost" data-toggle="modal" data-target="#cost-mod">
+            <div class="modal fade" id="cost-mod">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"><h1><span id="cost-msg"></span></h1></div>
+                        <div class="modal-body"><span id="cost-explain"> Cost for each adult = $300 <br>Cost of each minor = $100 <br> Total fare = total adult cost + total minor cost + relavant taxes based on distance covered and route choses</span></div>
+                        <div class="modal-footer"><button class="btn" data-dismiss="modal" id="checkout">Got it, checkout now.</button></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    
+        <br> <br>
+        
+        <!-- FOOTER begins from here -->
+        <footer class="container-fluid foot">
+            <div class="row col-lg-12">© Compiled and Coded by: </div>
+            <div class="row">
+                <div class="col-lg-3 names">MD RAFI AKHTAR</div>
+                <div class="col-lg-9">
+                    <button class="btn btn-sm dropdown-toggle" id="rafisocial" data-toggle="dropdown"> Visit Me </button>
+                    <ul class="dropdown-menu" aria-labelled-by="rafisocial">
+                        <li><a href="https://www.facebook.com/rafi007akhtar" target="_blank" class="knowme btn">Facebook</a></li>
+                        <li><a href="https://github.com/rafi007akhtar/" target="_blank" class="knowme btn">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/md-rafi-akhtar-46283424/" target="_blank" class="knowme btn">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row col-lg-6">More info can be found in the&nbsp;<a href="" class="knowus">ABOUT US</a>&nbsp;section</div>
+            <br>
+            <h6 class="row col-lg-12 disclaimer">DISCLAIMER: </h6>
+            <div class="row col-lg-12 disclaimer col-xs-12">
+                All codes are written and compiled from scratch. The only libraries and frameworks used are&nbsp;<a href="https://github.com/jquery/jquery" class="knowus" target="_blank">jQuery</a>&nbsp;and&nbsp; <a href="https://github.com/twbs/bootstrap" class="knowus" target="_blank">Bootstrap.</a>&nbsp;No code has been plagiarised from elsewhere or otherwise. <br>
+            </div>
+            <div class="row col-lg-12 disclaimer col-xs-12">
+                The entire source-code of this open project can be found on the GitHub link posted in the&nbsp;<a href="index.html" class="knowus">HOME</a>&nbsp;page. <br>
+            </div>
+            <div class="row col-lg-12 disclaimer col-xs-12">
+                <u>Website made for a contest.</u>                
+            </div>
+        </footer>        
+                
+        <!-- Latest compiled and minified jQuery -->
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/3.1.1/jquery.js"></script>
+        <!-- Latest compiled and minified Bootstrap JS -->
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+        
+        <script>
+            var routeCost = 30;
+            
+            /* interactions of sub navigation bar */
+            var current = $(".travel-current");
+            var way1 = $(".way1");
+            var way2 = $(".way2");
+            var way3 = $(".way3");
+            way1.click(function() {
+                if(current === way1)
+                    return 0;
+                current.removeClass("travel-current");
+                current = way1;
+                current.addClass("travel-current");
+                $("#via").text("The comfort of a flight. Pro tip: Keep your hands inside the window!");
+                routeCost = 30;
+            });
+            way2.click(function() {
+                if(current === way2)
+                    return 0;
+                current.removeClass("travel-current");
+                current = way2;
+                current.addClass("travel-current");
+                $("#via").text("Across the oceans, I will find thee! Amen.");
+                routeCost = 20;
+                
+            });
+            way3.click(function() {
+                if(current === way3)
+                    return 0;
+                current.removeClass("travel-current");
+                current = way3;
+                current.addClass("travel-current");
+                $("#via").text("These aren't just trains: they're super trains, capable of travelling through continents!");
+                routeCost = 10;
+            });
+            
+            /* compute the travel fare */
+            var i, city1, city2;
+            var cost = $("#cost");
+            cost.hide();
+            for(i = 0; i <= 10; i++)
+                $(".city"+i).hide();
+            // depart
+            $("#gotham-dep").on("click", function(event) {
+                $("#got1").show();
+                $("#depart").addClass("disabled");
+                city1 = 1;
+            });
+            $("#met-dep").on("click", function(event) {
+                $("#met1").show();
+                $("#depart").addClass("disabled");
+                city1 = 2;
+            });
+            $("#the-dep").on("click", function(event) {
+                $("#the1").show();
+                $("#depart").addClass("disabled");
+                city1 = 3;
+            });
+            $("#cen-dep").on("click", function(event) {
+                $("#cen1").show();
+                $("#depart").addClass("disabled");
+                city1 = 4;
+            });
+            $("#sta-dep").on("click", function(event) {
+                $("#sta1").show();
+                $("#depart").addClass("disabled");
+                city1 = 5;
+            });
+            // arrive
+            $("#gotham-arr").on("click", function(event) {
+                $("#got2").show();
+                $("#arrive").addClass("disabled");
+                cost.show();
+                city2 = 1;
+            });
+            $("#met-arr").on("click", function(event) {
+                $("#met2").show();
+                $("#arrive").addClass("disabled");
+                cost.show();
+                city2 = 2;
+            });
+            $("#the-arr").on("click", function(event) {
+                $("#the2").show();
+                $("#arrive").addClass("disabled");
+                cost.show();
+                city2 = 3;
+            });
+            $("#cen-arr").on("click", function(event) {
+                $("#cen2").show();
+                $("#arrive").addClass("disabled");
+                cost.show();
+                city2 = 4;
+            });
+            $("#sta-arr").on("click", function(event) {
+                $("#sta2").show();
+                $("#arrive").addClass("disabled");
+                cost.show();
+                city2 = 5;
+            });
+            
+            /* compute cost */
+            $("#cost").on("click", function(event) {
+                var ad = document.getElementById("adult").value;
+                var ch = document.getElementById("child").value;
+                dist = Math.abs(city2 - city1);
+                var costs = (ad*300*dist) + (ch*100*dist);
+                if(costs !== 0)
+                    costs += routeCost
+                $("#cost-msg").text("Your total fare is $"+costs);
+            });
+            
+            /* checkout */
+            $("#checkout").on("click", function(event) {
+                alert("Thanks for reaching out to us. You'll be contacted soon for your travels. Have a safe journey");                
+            });
+            
+        </script>
+    </body>
+</html>

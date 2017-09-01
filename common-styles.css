@@ -1,29 +1,52 @@
 /* ids first */
-#nav
+/*#nav
 {
-    background-color:#f58989;
+    background-color: #f58989;
     border-radius: 7px;
-}
+}*/
 
 
 /* classes second */
-.test-css
+
+.foot
 {
+    background-color: #afa1a1;
+}
+.names
+{
+    font-family: serif;
+    font-weight: 800;
+}
+.knowme
+{
+    color: #000000;
+}
+.knowus
+{
+    color: aliceblue;
+}
+<<<<<<< HEAD
+
+||||||| merged common ancestors
+.italic-text
+{
+    font-style: italic
+}
+.login-header
+{
+    border-radius: 5px;
+    font-weight: bold;
     font-family: monospace;
+    font-size: 1.5em;
 }
-.nav-link
+=======
+.knowus:hover
 {
-    text-decoration: none;
-    color:#fefafa;
+    color: aliceblue;
 }
-.nav-link:hover, .nav-link:visited, .nav-link:active, .nav-link:focus
+.disclaimer
 {
-    background-color: crimson;
-    color:#fefafa;
-    text-decoration: none;
-}
-.stay
-{
-    background-color: crimson;
+    font-size: 13px;
 }
 
+>>>>>>> optimized

@@ -16,16 +16,38 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         
         <!-- Latest compiled and minified Bootstrap -->
         <link rel="stylesheet" href="http://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-        
+        <!--
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+       
         <!-- Own CSS stylesheet -->
         <link rel="stylesheet" href="common-styles.css">
         
         <!-- Include FONT AWESOME icons 
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>-->
-        <title> TRANS | Home </title>
+        <title> SuperTravels | Home </title>
         
         <!-- CSS for home page -->
         <style>
+            
+            #captcha
+            {
+                border: 1px solid black;
+                border-radius: 7px;
+                padding: 5px;
+                text-align: center;
+                font-family: fantasy;
+                font-size: 1.5em;
+                background-color: #f0cf93;
+            }
+            
+            .home1
+            {
+                background-image: url(images/gif1.jpg);
+                background-size: cover;
+                margin: 5px;
+                border-radius: 5px;
+            }
+            
             .italic-text
             {
                 font-style: italic
@@ -41,31 +63,116 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
         
     </head>
     
-    <body>
-        <div class="container-fluid">
-            <!-- Let's build the navbar! -->
-            <div class="row text-center" id="nav">
-                <div class="col-lg-2 col-xs-12"  id="logo-img"> Logo placeholder </div>
-                <a class="col-lg-2 col-xs-12 nav-link stay" href="#" id="nav1"> HOME</a>
-                <a class="col-lg-2 col-xs-12 nav-link" href="#" id="nav2"> TRAVEL OPTIONS </a>
-                <a class="col-lg-2 col-xs-12 nav-link" href="#" id="nav3"> ABOUT US </a>
-                <a class="col-lg-2 col-xs-12 nav-link" href="#" id="nav4"> CONTACT US </a>
-                <a class="col-lg-2 col-xs-12 nav-link" href="#" id="nav5"> CHECKOUT </a>
-            </div>
-            <!-- The navbar ends here -->
+    <body>    
+        <nav class="navbar navbar-toggleable-md navbar-light bg-inverse fixed-top">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color: #f3f5f6"> SuperTravels</a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html" style="color: #ccdada; border: 1px solid #ccdada">HOME<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="travel.html" style="color: #cbd5c7">TRAVEL OPTIONS</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link" href="about.html" style="color:  #cbd5c7">ABOUT US</a>
+                </li>
+            </ul>
+
+          </div>
+        </nav>
+        
+        <div class="container">
+            <div class="row"> &nbsp; </div>
+            <div class="row"> &nbsp; </div>
+            <div class="row"> &nbsp; </div>
         </div>
                 
         <!-- The home page (index.html) is written here -->
         
+
+        <!-- The navbar ends here -->
+>>>>>>> optimized
+        
+<<<<<<< HEAD
         <div class="container-fluid">
+||||||| merged common ancestors
+        <div class="container-fluid">
+            <!-- Images slideshow will be shown here -->
+            <img src="images/gif1.jpg" class="img-responsive col-lg-12" height="500px" id="gif1">
+            <img src="images/gif2.JPG" class="img-responsive col-lg-12" height="500px" id="gif2">
+            <img src="images/gif3.JPG" class="img-responsive col-lg-12" height="500px" id="gif3">
+            <img src="images/gif4.JPG" class="img-responsive col-lg-12" height="500px" id="gif4">            
+        </div>
+        
+        <div class="container">
             <div class="row">
+                <h1 class="col-lg-3.5"> Welcome to TR<sub>ANS!</sub> </h1>
+                <span class="col-lg-0.5"><!-- Blank space in b/w two columns --></span>
+                <span class="col-lg-8">Here, you get all your <span class="italic-text">TRavel ANSwers</span>. From searching for the best travel options to booking tickets and checkout, we cover them all. Rest assured, you've come to the right place.</span>
+                <br>
+            </div>
+            <div class="row"> <br></div>
+=======
+
+        <!-- The home page (index.html) is written here -->        
+        
+        <div class="container-fluid home1">
+            <div class="row">
+                <h1 class="col-lg-3.5"> Welcome to SuperTravels </h1>
+                <span class="col-lg-0.5"><!-- Blank space in b/w two columns --></span>
+                <span class="col-lg-8">Here, you get all your <span class="italic-text">superhero city</span> travel anwers. From searching for the best travel options to booking tickets and checkout, we cover them all. Rest assured, you've come to the right place.</span>
+                <br>
+            </div>
+            <div class="row"> <br></div>
+>>>>>>> optimized
+            <div class="row">
+<<<<<<< HEAD
                 <div class="col-lg-6">
                     <!-- Images slideshow will be shown here -->
                     <img src="images/gif1.jpg" width="650px" id="gif1">
                     <img src="images/gif2.JPG"  id="gif2">
                     <img src="images/gif3.JPG"  id="gif3">
                     <img src="images/gif4.JPG"  id="gif4">       
+||||||| merged common ancestors
+                <!-- The login/signup dialog will be written here -->
+                <div class="col-lg-3" id="login-form">
+                    <div class="row bg-success login-header container">LOGIN HERE</div>
+                    <form>
+                        <input type="text" placeholder="Enter user id / email" class="form-control row container" required>
+                        <input type="password" placeholder="Enter password" class="form-control row container" required>
+                        <button class="btn btn-info row container">Enter</button>
+                        <div class="row container">New user? &nbsp;<a href="#" id="signup">Sign-up here</a></div>
+                    </form>
+=======
+                <!-- The login form will be written here -->
+                <div class="col-lg-5">
+                    <form id="login-form">
+                        <div class="bg-success login-header text-center">HAVE AN ACCOUNT? LOGIN HERE</div>
+                        <input type="text" placeholder="Enter user id / email" class="form-control" required id="login-id">
+                        <input type="password" placeholder="Enter password" class="form-control" required var="login-password">
+                        <button class="btn btn-info container" type="submit" id="login-submit">Enter</button> <br> &nbsp;
+                    </form>
+                    
+                    <!-- the "forgot password" form is written down below -->
+                    <form>
+                        <div class="bg-primary login-header text-center">FORGOT PASSWORD?</div>
+                        <input type="email" placeholder="Enter email here" class="form-control" required id="forgot-email">
+                        <input type="number" placeholder="Enter CAPTCHA here" required class="form-control" id="cap-text">
+                        <div class="row container-fluid">
+                            <button class="btn col-lg-8 col-md-12" id="gen-captcha" type="button">Refresh CAPTCHA</button>
+                            <div id="captcha" class="col-lg-4 col-md-12"></div>
+                        </div>
+                        <button class="btn btn-warning container" type="submit" id="forgot">Get password reset email</button> &nbsp;
+                    </form>
+                    <br> <br>
+>>>>>>> optimized
                 </div>
+<<<<<<< HEAD
                 <div class="col-lg-6">
                     <h1> Welcome to TR<sub>ANS!</sub> </h1>
                     <span>Here, you get all your <span class="italic-text">TRavel ANSwers</span>. From searching for the best travel options to booking tickets and checkout, we cover them all. Rest assured, you've come to the right place.</span>
@@ -92,39 +199,129 @@ Checkout page: Consumer details and billing details. (Pic 6 & Pic 7)
                             <div class="row container">Have an account? &nbsp;<a href="#" id="login">Login here</a></div>
                         </form>
                     </div>
+||||||| merged common ancestors
+                <div class="col-lg-3" id="signup-form">
+                    <div class="row bg-info login-header container">SIGNUP HERE</div>
+                    <form>
+                        <input type="text" placeholder="Enter full name" class="form-control row container" required id="name">
+                        <input type="date" placeholder="Enter date of birth" class="form-control row container" required id="dob">
+                        <input type="email" placeholder="Enter email id" class="form-control row container" required id="mail">
+                        <input type="password" placeholder="Enter password" class="form-control row container" required id="pass1">
+                        <input type="password" placeholder="Re-enter password" class="form-control row container" required id="pass2">
+                        <button class="btn btn-primary row container" id="create">Create Account</button>
+                        <div class="row container">Have an account? &nbsp;<a href="#" id="login">Login here</a></div>
+                    </form>
+=======
+                
+                <!-- A couple of visiting links to show-off! -->
+                <div class="col-lg-2">
+                    &nbsp;
+                    <a href="https://www.facebook.com/travelanswerspage/" target="_blank"><button class="btn btn-primary container">Visit us on Facebook</button></a>
+                    <br> &nbsp;
+                    <a href="https://github.com/rafi007akhtar/Travel-Site" target="_blank"><button class="btn btn-success container"> Visit us on GitHub</button> </a> <br> &nbsp;
+                </div>
+                
+                <!-- The signup form - the last form in the home page -->
+                <div class="col-lg-5">
+                    <form id="signup-form">
+                        <div class="bg-info login-header text-center">NEW USER? SIGNUP HERE</div>
+                        <input type="text" placeholder="Enter full name" class="form-control " required id="name">
+                        <input type="date" placeholder="Enter date of birth" class="form-control" required id="dob">
+                        <input type="email" placeholder="Enter email id" class="form-control" required id="mail">
+                        <input type="password" placeholder="Enter password" class="form-control" required id="pass1">
+                        <input type="password" placeholder="Re-enter password" class="form-control" required id="pass2">
+                        <button class="btn btn-primary  container" id="create">Create Account</button>
+                    </form>
+>>>>>>> optimized
+                </div>
+            </div>
+        </div>
+        
+        <!-- FOOTER begins from here -->
+        <footer class="container-fluid foot">
+            <div class="row col-lg-12">© Compiled and Coded by: </div>
+            <div class="row">
+                <div class="col-lg-3 names">MD RAFI AKHTAR</div>
+                <div class="col-lg-9">
+                    <button class="btn btn-sm dropdown-toggle" id="rafisocial" data-toggle="dropdown"> Visit Me </button>
+                    <ul class="dropdown-menu" aria-labelled-by="rafisocial">
+                        <li><a href="https://www.facebook.com/rafi007akhtar" target="_blank" class="knowme btn">Facebook</a></li>
+                        <li><a href="https://github.com/rafi007akhtar/" target="_blank" class="knowme btn">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/md-rafi-akhtar-46283424/" target="_blank" class="knowme btn">LinkedIn</a></li>
+                    </ul>
                 </div>
             </div>
             
-        </div>
+            <div class="row col-lg-6">More info can be found in the&nbsp;<a href="" class="knowus">ABOUT US</a>&nbsp;section</div>
+            <br>
+            <h6 class="row col-lg-12 disclaimer">DISCLAIMER: </h6>
+            <div class="row col-lg-12 disclaimer col-xs-12">
+                All codes are written and compiled from scratch. The only libraries and frameworks used are&nbsp;<a href="https://github.com/jquery/jquery" class="knowus" target="_blank">jQuery</a>&nbsp;and&nbsp; <a href="https://github.com/twbs/bootstrap" class="knowus" target="_blank">Bootstrap.</a>&nbsp;No code has been plagiarised from elsewhere or otherwise. <br>
+            </div>
+            <div class="row col-lg-12 disclaimer col-xs-12">
+                The entire source-code of this open project can be found on the GitHub link posted in the&nbsp;<a href="index.html" class="knowus">HOME</a>&nbsp;page. <br>
+            </div>
+            <div class="row col-lg-12 disclaimer col-xs-12">
+                <u>Website made for a contest.</u>                
+            </div>
+        </footer>                
                 
         <!-- Latest compiled and minified jQuery -->
         <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/3.1.1/jquery.js"></script>
-        <script type="text/javascript" src="common-interactions.js"></script>
+        <!-- Latest compiled and minified Bootstrap JS -->
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+        
         <script>
-            // setting the login/signup interactions
-            var signup = $("#signup");
-            var login = $("#login");
-            var form1 = $("#login-form");
-            var form2 = $("#signup-form");
-            form2.hide();
-            signup.click(function() {
-                form1.hide();
-                form2.slideToggle();
-            });
-            login.click(function() {
-                form2.hide();
-                form1.slideToggle();
+            
+            
+            // setting the login interactions
+            $("#login-form").on("submit", function(event) {
+                event.preventDefault;
+                var id = document.getElementById("login-id");
+                if(id.value !== "")
+                    alert("Invalid user id/password. No such record found in our data base");
             });
             
-            // setting the image slideshow in homepage
-            var gif1 = $("#gif1");
-            var gif2 = $("#gif2");
-            var gif3 = $("#gif3");
-            var gif4 = $("#gif4");
-            gif2.hide();
-            gif3.hide();
-            gif4.hide();
+            // setting the signup interactions
+            $("#signup-form").on("submit", function(event) {
+                event.preventDefault;
+                alert("Sorry! Looks like our servers are down. Please try sometime later")
+            });
             
+            
+            // setting the forgot password alert
+            var cap = ""; // generating CAPTCHA first
+            var captcha = $("#captcha");
+            var gencaptcha = function(cap)
+            {
+                cap = "";
+                cap = cap + Math.floor(Math.random()*10) + Math.floor(Math.random()*10) + Math.floor(Math.random()*10) + Math.floor(Math.random()*10);
+                captcha.text(cap);
+                return cap;
+            };
+            cap = gencaptcha(cap);
+            $("#gen-captcha").on("click", function(event) {
+                event.preventDefault;
+                cap = gencaptcha(cap);
+            });
+            // now set what the submit button does
+            var forgot = $("#forgot");
+            forgot.click(function() {
+                var msg ="Please check your email for the reset password link. Note that you'll receive the email only if you're a member.";
+                var forg = document.getElementById("forgot-email");
+                var captext = document.getElementById("cap-text");
+                if(/^.\S*@{1}.\S*[.]{1}.\S*$/.test(forg.value) && captext.value === cap)
+                    alert(msg);
+                else
+                {
+                    msg = "";
+                    if (/^.\S*@{1}.\S*[.]{1}.\S*$/.test(forg.value) === false)
+                        msg = msg + "Invalid email. ";
+                    if(captext.value !== cap)
+                        msg = msg + "Incorrect CAPTCHA";
+                    alert(msg);
+                }
+            });
             
         </script>
     </body>
